@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://bq3huk364skd3"]
+
+[ext_resource type="Texture2D" uid="uid://b73dso0jvp84a" path="res://Assets/DogImanges/dogsideviewnotpng.webp" id="1_6pedr"]
+[ext_resource type="Script" uid="uid://1x17y57vaewg" path="res://Scenes/button_2.gd" id="2_syfuq"]
+
+[node name="Control" type="Control" unique_id=348695236]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 140.0
+offset_top = -17.0
+offset_right = 140.0
+offset_bottom = -17.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Dogsideviewnotpng" type="Sprite2D" parent="." unique_id=2087625123]
+position = Vector2(113, 306)
+texture = ExtResource("1_6pedr")
+
+[node name="Button" type="Button" parent="." unique_id=511668650]
+layout_mode = 0
+offset_left = 379.0
+offset_top = 125.0
+offset_right = 639.0
+offset_bottom = 243.0
+text = "Mini game 1"
+script = ExtResource("2_syfuq")
+ButtonNum = 1
+
+[node name="Button3" type="Button" parent="." unique_id=312749151]
+layout_mode = 0
+offset_left = 380.0
+offset_top = 254.0
+offset_right = 640.0
+offset_bottom = 372.0
+text = "mini game 3"
+script = ExtResource("2_syfuq")
+ButtonNum = 3
+
+[node name="Button2" type="Button" parent="." unique_id=1299896259]
+layout_mode = 0
+offset_left = 650.0
+offset_top = 125.0
+offset_right = 910.0
+offset_bottom = 243.0
+text = "mini game 2"
+script = ExtResource("2_syfuq")
+ButtonNum = 2
+
+[node name="Button5" type="Button" parent="." unique_id=989852558]
+layout_mode = 0
+offset_left = 517.0
+offset_top = 403.0
+offset_right = 778.0
+offset_bottom = 474.0
+text = "End Day"
+script = ExtResource("2_syfuq")
+ButtonNum = 5
+
+[node name="Button4" type="Button" parent="." unique_id=2092027147]
+layout_mode = 0
+offset_left = 650.0
+offset_top = 253.0
+offset_right = 910.0
+offset_bottom = 371.0
+text = "Explore"
+script = ExtResource("2_syfuq")
+ButtonNum = 4
