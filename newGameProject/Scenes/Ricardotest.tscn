@@ -37,7 +37,7 @@ scale = Vector2(0.5505371, 0.5847168)
 texture = ExtResource("7_2k6bf")
 
 [node name="PetSite" type="Button" parent="DogWaiting" unique_id=2008423511 node_paths=PackedStringArray("sprite", "progressBar")]
-visible = false
+z_index = -2
 offset_left = -9.054005
 offset_top = -612.046
 offset_right = 191.94325
