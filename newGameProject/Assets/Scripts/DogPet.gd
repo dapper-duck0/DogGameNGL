@@ -2,6 +2,7 @@ extends Button
 
 var is_held = false
 var is_in_bounds = false
+@export var sprite: Sprite2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -14,7 +15,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if is_held and is_in_bounds:
-		print("Petting")
+		wiggle()
 
 func _on_button_down() -> void:
 	is_held = true
@@ -27,3 +28,9 @@ func _on_enter() -> void:
 
 func _on_exit() -> void:
 	is_in_bounds = false
+
+func wiggle() -> void:
+	var tween = create_tween()
+	tween.tween_property(sprite, "rotation_degrees", randf_range(-20, 20), 0.4)
+	
+	
