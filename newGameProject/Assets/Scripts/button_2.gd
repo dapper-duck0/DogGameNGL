@@ -11,6 +11,7 @@ func _pressed() -> void:
 		get_tree().change_scene_to_file("res://Scenes/Ricardotest.tscn")
 	elif ButtonNum == 2:
 		print("Hello2")
+		get_tree().change_scene_to_file("res://Scenes/FeedTheStorm.tscn")
 	elif ButtonNum == 3:
 		print("Hello3")
 	elif ButtonNum == 4:
