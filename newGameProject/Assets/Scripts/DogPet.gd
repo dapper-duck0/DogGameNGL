@@ -10,6 +10,7 @@ var work_timer: float = 3.0
 var anchor_position: Vector2
 
 @export var sprite: Sprite2D
+@export var progressBar: ProgressBar
 @export var tilt: float
 @export var speed: float
 @export var movement_threshold: float = 10.0
@@ -32,7 +33,8 @@ func _process(delta: float) -> void:
 	if is_held and is_in_bounds and has_moved_enough() and not won:
 		anchor_position = get_viewport().get_mouse_position()
 		petAmount += petSpeed * delta
-		print(petAmount)
+		progressBar.value = petAmount
+		
 		wiggle()
 		
 		if petAmount >= 100:
