@@ -15,7 +15,8 @@ var anchor_position: Vector2
 @export var speed: float
 @export var movement_threshold: float = 10.0
 @export var petSpeed: float
-@export var required_distance: float = 10.0 # Pixels
+@export var required_distance: float = 10.0
+@export var transitionScenes: String
 
 
 
@@ -39,7 +40,7 @@ func _process(delta: float) -> void:
 		
 		if petAmount >= 100:
 			won = true
-			print("You Win")
+			get_tree().change_scene_to_file(transitionScenes)
 	
 
 func has_moved_enough() -> bool:

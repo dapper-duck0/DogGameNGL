@@ -18,6 +18,7 @@ position = Vector2(-129, 441)
 texture = ExtResource("2_quk4b")
 script = ExtResource("3_7iwhi")
 dogSprite = NodePath(".")
+transitionScenes = "res://Scenes/Menu.tscn"
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=775125135]
 position = Vector2(-50000000000, 0)
@@ -28,3 +29,5 @@ stream = ExtResource("4_ev7l6")
 autoplay = true
 script = ExtResource("3_ev7l6")
 room_sounds = Array[AudioStream]([ExtResource("4_ev7l6")])
+
+[node name="soundManager" type="Node" parent="." unique_id=1477227392]

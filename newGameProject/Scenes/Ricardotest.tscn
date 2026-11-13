@@ -48,6 +48,7 @@ progressBar = NodePath("../../ProgressBar")
 tilt = 10.0
 speed = 0.2
 petSpeed = 20.0
+transitionScenes = "res://Scenes/Menu.tscn"
 
 [node name="ProgressBar" type="ProgressBar" parent="." unique_id=490971242]
 offset_left = 2.0
