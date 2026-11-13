@@ -8,6 +8,7 @@ func _ready() -> void:
 func _pressed() -> void:
 	if ButtonNum == 1:
 		print("Hello1")
+		get_tree().change_scene_to_file("res://Scenes/Ricardotest.tscn")
 	elif ButtonNum == 2:
 		print("Hello2")
 	elif ButtonNum == 3:

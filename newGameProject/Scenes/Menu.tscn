@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bq3huk364skd3"]
 
 [ext_resource type="Texture2D" uid="uid://b73dso0jvp84a" path="res://Assets/DogImanges/dogsideviewnotpng.webp" id="1_6pedr"]
+[ext_resource type="Script" uid="uid://cnbsh48i63f2t" path="res://Scenes/lookAtMouse.gd" id="2_s2c3o"]
 [ext_resource type="Script" uid="uid://1x17y57vaewg" path="res://Scenes/button_2.gd" id="2_syfuq"]
 
 [node name="Control" type="Control" unique_id=348695236]
@@ -18,6 +19,7 @@ grow_vertical = 2
 [node name="Dogsideviewnotpng" type="Sprite2D" parent="." unique_id=2087625123]
 position = Vector2(113, 306)
 texture = ExtResource("1_6pedr")
+script = ExtResource("2_s2c3o")
 
 [node name="Button" type="Button" parent="." unique_id=511668650]
 layout_mode = 0
