@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://8h5cpy5kxdqw" path="res://Background/Ominous Magenta Kitchen at Night.png" id="1_1t455"]
 [ext_resource type="Texture2D" uid="uid://c3feyf3kr3l6x" path="res://Assets/DogBowls/empty_dog_bowl_transparent.png" id="2_e88qu"]
 [ext_resource type="Script" uid="uid://b82osgvm0wedp" path="res://Assets/Scripts/FeedingScript.gd" id="3_juyli"]
+[ext_resource type="Texture2D" uid="uid://b0dro27mnd02i" path="res://Assets/DogBowls/Pixel-Art MAX Dog Food Bag.png" id="4_e88qu"]
 
 [node name="Node2D" type="Node2D" unique_id=1479693001]
 
@@ -12,7 +13,14 @@ scale = Vector2(0.69180125, 0.6865037)
 texture = ExtResource("1_1t455")
 
 [node name="EmptyDogBowlTransparent" type="Sprite2D" parent="." unique_id=923181926]
-position = Vector2(575, 579.00006)
+position = Vector2(768, 582)
 scale = Vector2(0.3503628, 0.29907408)
 texture = ExtResource("2_e88qu")
 script = ExtResource("3_juyli")
+
+[node name="PixelArtMaxDogFoodBag" type="Sprite2D" parent="." unique_id=484456259]
+position = Vector2(272, 421)
+scale = Vector2(0.20117188, 0.17708333)
+texture = ExtResource("4_e88qu")
+
+[node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=1550672267]

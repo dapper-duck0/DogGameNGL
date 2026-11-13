@@ -41,7 +41,7 @@ offset_left = 379.0
 offset_top = 125.0
 offset_right = 639.0
 offset_bottom = 243.0
-text = "Mini game 1"
+text = "Pet the doggo"
 script = ExtResource("3_syfuq")
 ButtonNum = 1
 
@@ -51,7 +51,7 @@ offset_left = 380.0
 offset_top = 254.0
 offset_right = 640.0
 offset_bottom = 372.0
-text = "mini game 3"
+text = "Walk the Doggo"
 script = ExtResource("3_syfuq")
 ButtonNum = 3
 
@@ -61,7 +61,7 @@ offset_left = 650.0
 offset_top = 125.0
 offset_right = 910.0
 offset_bottom = 243.0
-text = "mini game 2"
+text = "Feed the doggo"
 script = ExtResource("3_syfuq")
 ButtonNum = 2
 
@@ -91,7 +91,7 @@ position = Vector2(436.50006, 339.93753)
 scale = Vector2(0.6848086, 0.6908873)
 texture = ExtResource("5_ma218")
 script = ExtResource("6_idohh")
-roomNumber = 3
+roomNumber = 1
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="SunlitRetroLivingRoom" unique_id=187395137]
 stream = SubResource("AudioStreamWAV_qki4b")

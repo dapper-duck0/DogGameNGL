@@ -13,7 +13,7 @@ func _pressed() -> void:
 		print("Hello2")
 		get_tree().change_scene_to_file("res://Scenes/FeedTheStorm.tscn")
 	elif ButtonNum == 3:
-		print("Hello3")
+		get_tree().change_scene_to_file("res://Scenes/RicardoWalk.tscn")
 	elif ButtonNum == 4:
 		print("Hello4")
 	else:
