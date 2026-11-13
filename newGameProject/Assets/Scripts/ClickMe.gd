@@ -11,9 +11,3 @@ func _heldChangeTrue() -> void:
 func _heldChangeFalse() -> void:
 	isHeld = false
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	
-	if isHeld == true:
-		print("HOLD")
-	else:
-		print("Drop")
