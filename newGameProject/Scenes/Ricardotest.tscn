@@ -1,3 +1,18 @@
 [gd_scene format=3 uid="uid://cd5oesy0v0q2d"]
 
+[ext_resource type="Texture2D" uid="uid://df3syeqd6jsv7" path="res://Assets/DogImanges/Dog_waiting.png" id="1_g2e58"]
+[ext_resource type="Script" uid="uid://bchxc6fdlr12x" path="res://Assets/Scripts/DogPet.gd" id="2_hx38p"]
+
 [node name="Ricardotest" type="Node2D" unique_id=201748182]
+
+[node name="DogWaiting" type="Sprite2D" parent="." unique_id=827278499]
+position = Vector2(560, 452)
+scale = Vector2(0.28059998, 0.37833846)
+texture = ExtResource("1_g2e58")
+
+[node name="Button" type="Button" parent="DogWaiting" unique_id=2008423511]
+offset_left = -399.14465
+offset_top = -1091.6152
+offset_right = 518.02356
+offset_bottom = -174.44702
+script = ExtResource("2_hx38p")
