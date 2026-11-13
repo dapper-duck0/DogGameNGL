@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dvjvsvmyoma27"]
+
+[ext_resource type="Texture2D" uid="uid://df3syeqd6jsv7" path="res://Assets/DogImanges/Dog_waiting.png" id="1_2i60g"]
+[ext_resource type="Script" uid="uid://bchxc6fdlr12x" path="res://Assets/Scripts/DogPet.gd" id="2_e155u"]
+
+[node name="DogWaiting" type="Sprite2D" unique_id=1518689137]
+scale = Vector2(0.28059998, 0.37833846)
+texture = ExtResource("1_2i60g")
+
+[node name="PetSite" type="Button" parent="." unique_id=623862906 node_paths=PackedStringArray("sprite")]
+offset_left = -99.78613
+offset_top = -970.03094
+offset_right = 185.31714
+offset_bottom = -621.13696
+script = ExtResource("2_e155u")
+sprite = NodePath("..")
+tilt = 10.0
+speed = 0.2
+petSpeed = 20.0

@@ -10,10 +10,13 @@ position = Vector2(560, 452)
 scale = Vector2(0.28059998, 0.37833846)
 texture = ExtResource("1_g2e58")
 
-[node name="Button" type="Button" parent="DogWaiting" unique_id=2008423511 node_paths=PackedStringArray("sprite")]
-offset_left = -399.14465
-offset_top = -1091.6152
-offset_right = 518.02356
-offset_bottom = -174.44702
+[node name="PetSite" type="Button" parent="DogWaiting" unique_id=2008423511 node_paths=PackedStringArray("sprite")]
+offset_left = -99.78613
+offset_top = -970.03094
+offset_right = 185.31714
+offset_bottom = -621.13696
 script = ExtResource("2_hx38p")
 sprite = NodePath("..")
+tilt = 10.0
+speed = 0.2
+petSpeed = 20.0
