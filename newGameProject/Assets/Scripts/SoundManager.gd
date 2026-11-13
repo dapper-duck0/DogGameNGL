@@ -1,43 +1,26 @@
-
 extends Node
 
-var sounds = {
-	"Walk": preload("res://Assets/SoundEffects/freesound_community-single-bark-of-a-dog-38780.mp3"),
-	##"growl": preload("res://Audio/Dog/growl.wav"),
-	
-}
+const NUM_PLAYERS = 8
+var available = []  # The available stream players
+var queue = []      # The queue of sounds to play
 
-var music_player: AudioStreamPlayer
+func _ready() -> void:
+	# Create a pool of AudioStreamPlayers
+	for i in NUM_PLAYERS:
+		var p = AudioStreamPlayer.new()
+		add_child(p)
+		available.append(p)
+		p.finished.connect(_on_stream_finished.bind(p))
+		p.bus = "SFX"
 
-func _ready():
-	music_player = AudioStreamPlayer.new()
-	add_child(music_player)
-	music_player.bus = "Music"
+func _on_stream_finished(stream: AudioStreamPlayer) -> void:
+	available.append(stream)
 
+func play(sound_path: String) -> void:
+	queue.append(sound_path)
 
-func play_sfx(sound_name: String):
-	if not sounds.has(sound_name):
-		print("Sound not found: ", sound_name)
-		return
-
-	var player = AudioStreamPlayer.new()
-	add_child(player)
-
-	player.stream = sounds[sound_name]
-	player.bus = "SFX"
-	player.pitch_scale = randf_range(0.95, 1.05)
-
-	player.finished.connect(player.queue_free)
-	player.play()
-
-
-func play_music(music: AudioStream):
-	if music_player.stream == music and music_player.playing:
-		return
-
-	music_player.stream = music
-	music_player.play()
-
-
-func stop_music():
-	music_player.stop()
+func _process(_delta: float) -> void:
+	if not queue.is_empty() and not available.is_empty():
+		var player = available.pop_front() as AudioStreamPlayer
+		player.stream = load(queue.pop_front())
+		player.play()

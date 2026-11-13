@@ -11,7 +11,7 @@ var win = 0
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and event.pressed and not win:
 		if event.button_index == MOUSE_BUTTON_LEFT:
-			##sound_manager.play_sfx("Walk")
+			##SoundManager.play()
 			moveDistance += speed
 			dogSprite.position += Vector2(speed, 0)
 			if moveDistance > moveLength:

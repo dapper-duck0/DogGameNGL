@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://daqdsiiifbcvf" path="res://Assets/Scripts/Walkcounter.gd" id="3_7iwhi"]
 [ext_resource type="Script" uid="uid://cinto3f4xnj1d" path="res://Scenes/audio_stream_player.gd" id="3_ev7l6"]
 [ext_resource type="AudioStream" uid="uid://ckmc24ll8apmq" path="res://MusicFLD/WalkingDog.wav" id="4_ev7l6"]
+[ext_resource type="PackedScene" uid="uid://du7hqt6skixor" path="res://Scenes/sound_manager.tscn" id="7_unyfg"]
 
 [node name="RicardoWalk" type="Node2D" unique_id=252372594]
 
@@ -13,12 +14,10 @@
 position = Vector2(724, 256)
 texture = ExtResource("1_xvoin")
 
-[node name="WalkTheDog" type="Sprite2D" parent="." unique_id=1089509129 node_paths=PackedStringArray("dogSprite")]
+[node name="WalkTheDog" type="Sprite2D" parent="." unique_id=1089509129]
 position = Vector2(-129, 441)
 texture = ExtResource("2_quk4b")
 script = ExtResource("3_7iwhi")
-dogSprite = NodePath(".")
-transitionScenes = "res://Scenes/Menu.tscn"
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=775125135]
 position = Vector2(-50000000000, 0)
@@ -30,4 +29,4 @@ autoplay = true
 script = ExtResource("3_ev7l6")
 room_sounds = Array[AudioStream]([ExtResource("4_ev7l6")])
 
-[node name="soundManager" type="Node" parent="." unique_id=1477227392]
+[node name="sound_manager" parent="Sprite2D/AudioStreamPlayer" unique_id=1549722425 instance=ExtResource("7_unyfg")]
