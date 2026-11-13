@@ -4,6 +4,11 @@
 [ext_resource type="Texture2D" uid="uid://c3feyf3kr3l6x" path="res://Assets/DogBowls/empty_dog_bowl_transparent.png" id="2_e88qu"]
 [ext_resource type="Script" uid="uid://b82osgvm0wedp" path="res://Assets/Scripts/FeedingScript.gd" id="3_juyli"]
 [ext_resource type="Texture2D" uid="uid://b0dro27mnd02i" path="res://Assets/DogBowls/Pixel-Art MAX Dog Food Bag.png" id="4_e88qu"]
+[ext_resource type="Texture2D" uid="uid://dlwpb3ix4ls4e" path="res://Assets/DogBowls/Pixel-Art Brown Kibble Pellet.png" id="5_p4182"]
+[ext_resource type="Script" uid="uid://dhlrn3dnmniaj" path="res://Assets/Scripts/food.gd" id="6_a6qcy"]
+[ext_resource type="Script" uid="uid://0pyx3dgsep5g" path="res://Assets/Scripts/ClickMe.gd" id="7_a6qcy"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gyvws"]
 
 [node name="Node2D" type="Node2D" unique_id=1479693001]
 
@@ -13,14 +18,35 @@ scale = Vector2(0.69180125, 0.6865037)
 texture = ExtResource("1_1t455")
 
 [node name="EmptyDogBowlTransparent" type="Sprite2D" parent="." unique_id=923181926]
-position = Vector2(768, 582)
+position = Vector2(1039, 576)
 scale = Vector2(0.3503628, 0.29907408)
 texture = ExtResource("2_e88qu")
 script = ExtResource("3_juyli")
 
 [node name="PixelArtMaxDogFoodBag" type="Sprite2D" parent="." unique_id=484456259]
-position = Vector2(272, 421)
+position = Vector2(126, 509)
 scale = Vector2(0.20117188, 0.17708333)
 texture = ExtResource("4_e88qu")
 
-[node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=1550672267]
+[node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=1279635315]
+position = Vector2(273.875, -102.62494)
+scale = Vector2(1, 0.99999994)
+freeze_mode = 1
+script = ExtResource("6_a6qcy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" unique_id=1543290153]
+position = Vector2(-317.875, 444.62497)
+shape = SubResource("CircleShape2D_gyvws")
+
+[node name="PixelArtBrownKibblePellet" type="Sprite2D" parent="RigidBody2D/CollisionShape2D" unique_id=207897355]
+position = Vector2(-3.0517578e-05, 0)
+scale = Vector2(0.03462442, 0.033536553)
+texture = ExtResource("5_p4182")
+
+[node name="Button" type="Button" parent="." unique_id=1444551735]
+offset_left = 68.0
+offset_top = 415.0
+offset_right = 205.0
+offset_bottom = 617.0
+action_mode = 0
+script = ExtResource("7_a6qcy")
