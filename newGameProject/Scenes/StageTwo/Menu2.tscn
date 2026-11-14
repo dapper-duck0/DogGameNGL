@@ -91,7 +91,7 @@ position = Vector2(436.50006, 339.93753)
 scale = Vector2(0.6848086, 0.6908873)
 texture = ExtResource("5_ma218")
 script = ExtResource("6_idohh")
-roomNumber = 1
+roomNumber = 2
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="SunlitRetroLivingRoom" unique_id=187395137]
 stream = SubResource("AudioStreamWAV_qki4b")
