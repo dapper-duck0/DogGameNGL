@@ -46,8 +46,8 @@ offset_bottom = -322.32013
 script = ExtResource("6_hjgsb")
 sprite = NodePath("..")
 progressBar = NodePath("../../ProgressBar")
-tilt = 10.0
-speed = 0.2
+tilt = 90.0
+speed = 0.1
 petSpeed = 20.0
 transitionScenes = "res://Scenes/Menu.tscn"
 
