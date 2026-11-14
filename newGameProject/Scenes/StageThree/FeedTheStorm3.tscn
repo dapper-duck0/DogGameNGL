@@ -9,6 +9,8 @@
 [ext_resource type="Script" uid="uid://0pyx3dgsep5g" path="res://Assets/Scripts/ClickMe.gd" id="7_cppxb"]
 [ext_resource type="Texture2D" uid="uid://dlwpb3ix4ls4e" path="res://Assets/DogBowls/Pixel-Art Brown Kibble Pellet.png" id="8_wfhsn"]
 [ext_resource type="Script" uid="uid://b70d4bs62w45a" path="res://Assets/Scripts/background.gd" id="9_yjc2s"]
+[ext_resource type="Texture2D" uid="uid://4v24mhyw3gp6" path="res://Assets/DogImanges/DownBoy.png" id="10_tdn70"]
+[ext_resource type="Script" uid="uid://cni6gajiwuayb" path="res://Assets/Scripts/Shaking.gd" id="11_ehhjt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gyvws"]
 size = Vector2(633.6288, 414.61322)
@@ -22,17 +24,19 @@ load_path = "res://.godot/imported/Pixel-Art Brown Kibble Pellet.png-e3152841537
 [node name="Node2D" type="Node2D" unique_id=1479693001]
 
 [node name="OminousMagentaKitchenAtNight" type="Sprite2D" parent="." unique_id=1185874664]
+z_index = -38
 position = Vector2(578, 323)
 scale = Vector2(0.69180125, 0.6865037)
 texture = ExtResource("1_rim8u")
 
-[node name="EmptyDogBowlTransparent" type="Sprite2D" parent="." unique_id=923181926]
+[node name="EmptyDogBowlTransparent" type="Sprite2D" parent="." unique_id=923181926 node_paths=PackedStringArray("goodBoy")]
 position = Vector2(1039, 576)
 scale = Vector2(0.3503628, 0.29907408)
 texture = ExtResource("2_lk4cj")
 script = ExtResource("3_x2rek")
 roomNumber = 3
 transitionScenes = "res://Scenes/StageThree/Menu3.tscn"
+goodBoy = NodePath("../DownBoy")
 
 [node name="Area2D" type="Area2D" parent="EmptyDogBowlTransparent" unique_id=316978217 node_paths=PackedStringArray("food", "bowl", "buttons")]
 script = ExtResource("4_lbs5e")
@@ -78,3 +82,9 @@ position = Vector2(-1398, 938)
 texture = ExtResource("8_wfhsn")
 script = ExtResource("9_yjc2s")
 roomNumber = 3
+
+[node name="DownBoy" type="Sprite2D" parent="." unique_id=56119804]
+z_index = -3
+position = Vector2(-363, 317)
+texture = ExtResource("10_tdn70")
+script = ExtResource("11_ehhjt")

@@ -11,6 +11,7 @@ var win = false
 
 @export var roomNumber: int
 @export var transitionScenes: String
+@export var goodBoy: Node
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	if roomNumber == 1:
@@ -29,7 +30,9 @@ func _process(delta: float) -> void:
 		else:
 			texture = room2
 		win = true
-		await get_tree().create_timer(2.0).timeout
+		await get_tree().create_timer(1.4).timeout
+		goodBoy.global_position = Vector2(915.0, 420.0)
+		await get_tree().create_timer(.4).timeout
 		get_tree().change_scene_to_file(transitionScenes)
 		
 		

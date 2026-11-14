@@ -22,17 +22,23 @@ load_path = "res://.godot/imported/Pixel-Art Brown Kibble Pellet.png-e3152841537
 [node name="Node2D" type="Node2D" unique_id=1479693001]
 
 [node name="OminousMagentaKitchenAtNight" type="Sprite2D" parent="." unique_id=1185874664]
+z_index = -50
 position = Vector2(578, 323)
 scale = Vector2(0.69180125, 0.6865037)
 texture = ExtResource("1_xmwsc")
 
-[node name="EmptyDogBowlTransparent" type="Sprite2D" parent="." unique_id=923181926]
+[node name="Node2D" type="Node2D" parent="." unique_id=1842279890]
+position = Vector2(1039, 576)
+scale = Vector2(0.3503628, 0.29907408)
+
+[node name="EmptyDogBowlTransparent" type="Sprite2D" parent="." unique_id=923181926 node_paths=PackedStringArray("goodBoy")]
 position = Vector2(1039, 576)
 scale = Vector2(0.3503628, 0.29907408)
 texture = ExtResource("2_276rp")
 script = ExtResource("3_n7w03")
 roomNumber = 2
 transitionScenes = "res://Scenes/StageTwo/Menu2.tscn"
+goodBoy = NodePath("../Node2D")
 
 [node name="Area2D" type="Area2D" parent="EmptyDogBowlTransparent" unique_id=316978217 node_paths=PackedStringArray("food", "bowl", "buttons")]
 script = ExtResource("4_12svh")

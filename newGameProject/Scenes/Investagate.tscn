@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://bsjxnmxwuxcxf"]
+
+[ext_resource type="Texture2D" uid="uid://c1nmnlbjw4fyp" path="res://Background/Cozy Vintage Pixel House Plan.png" id="1_awi2l"]
+[ext_resource type="Texture2D" uid="uid://opnnrci3ujgx" path="res://Assets/Walking Sprites/Pixel-Art Character Sprite Sheet-4.png" id="2_xrrie"]
+[ext_resource type="Script" uid="uid://bausm5cjjkfnf" path="res://Assets/Scripts/MovementScipts.gd" id="3_uoeh0"]
+
+[node name="Node2D" type="Node2D" unique_id=714749643]
+
+[node name="CozyVintagePixelHousePlan" type="Sprite2D" parent="." unique_id=570891108]
+z_index = -1645
+position = Vector2(943.5, 642.5)
+scale = Vector2(1.2467448, 1.2509766)
+texture = ExtResource("1_awi2l")
+
+[node name="PixelArtCharacterSpriteSheet4" type="Sprite2D" parent="CozyVintagePixelHousePlan" unique_id=2033089604]
+position = Vector2(73.39113, 99.52225)
+scale = Vector2(0.38497144, 0.44776812)
+texture = ExtResource("2_xrrie")
+script = ExtResource("3_uoeh0")
+
+[node name="Camera2D" type="Camera2D" parent="CozyVintagePixelHousePlan/PixelArtCharacterSpriteSheet4" unique_id=586994291]
+position = Vector2(0, 10.711426)
+scale = Vector2(2.5975952, 2.2332988)
