@@ -2,6 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://ba8x5sop0gaoi" path="res://Background/END.png" id="1_pw64i"]
 [ext_resource type="Script" uid="uid://clmn03mj4tbg" path="res://Assets/Scripts/creditsRoll.gd" id="2_67ibq"]
+[ext_resource type="AudioStream" uid="uid://cs17ijtcmjo65" path="res://MusicFLD/FinalAudit/dianasue500-male-deep-laugh-328480.mp3" id="3_03b8h"]
+[ext_resource type="AudioStream" uid="uid://bmpfr675xrxwl" path="res://MusicFLD/FinalAudit/universfield-horror-background-atmosphere-156462.mp3" id="4_x8vyd"]
 
 [node name="Node" type="Node" unique_id=1146980789]
 
@@ -56,3 +58,13 @@ Jarred
 flat = true
 autowrap_trim_flags = 0
 script = ExtResource("2_67ibq")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1621633640]
+stream = ExtResource("3_03b8h")
+volume_db = -10.215
+autoplay = true
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="." unique_id=559359415]
+stream = ExtResource("4_x8vyd")
+volume_db = 5.958
+autoplay = true
