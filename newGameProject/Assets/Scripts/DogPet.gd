@@ -23,6 +23,8 @@ var anchor_position: Vector2
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	SoundManager.play("res://Assets/SoundEffects/freesound_community-dog_panting_20090425t1417-22476.mp3")
+	
 	button_down.connect(_on_button_down)
 	button_up.connect(_on_button_up)
 	mouse_entered.connect(_on_enter)
@@ -35,11 +37,14 @@ func _process(delta: float) -> void:
 		anchor_position = get_viewport().get_mouse_position()
 		petAmount += petSpeed * delta
 		progressBar.value = petAmount
-		
 		wiggle()
+		if not SoundManager.is_sound_playing("res://Assets/SoundEffects/Petting Dog.wav"):
+			SoundManager.play("res://Assets/SoundEffects/Petting Dog.wav")
+		
 		
 		if petAmount >= 100:
 			won = true
+			SoundManager.stop_all()
 			get_tree().change_scene_to_file(transitionScenes)
 	
 
@@ -51,6 +56,7 @@ func _on_button_down() -> void:
 	is_held = true
 
 func _on_button_up() -> void:
+	SoundManager.remove_one("res://Assets/SoundEffects/Petting Dog.wav")
 	is_held = false
 	
 func _on_enter() -> void:
@@ -58,6 +64,7 @@ func _on_enter() -> void:
 
 func _on_exit() -> void:
 	is_in_bounds = false
+	SoundManager.remove_one("res://Assets/SoundEffects/Petting Dog.wav")
 
 func _unhandled_input(event: InputEvent) -> void:
 	is_moving_enough = event is InputEventMouseMotion and event.relative.length() >= movement_threshold

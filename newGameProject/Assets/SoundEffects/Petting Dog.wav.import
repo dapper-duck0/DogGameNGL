@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://byda32dl8h24d"
+path="res://.godot/imported/Petting Dog.wav-4a4bfa433c60ab60104aa3021755921c.sample"
+
+[deps]
+
+source_file="res://Assets/SoundEffects/Petting Dog.wav"
+dest_files=["res://.godot/imported/Petting Dog.wav-4a4bfa433c60ab60104aa3021755921c.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=2
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

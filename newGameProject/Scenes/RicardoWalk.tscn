@@ -14,10 +14,12 @@
 position = Vector2(724, 256)
 texture = ExtResource("1_xvoin")
 
-[node name="WalkTheDog" type="Sprite2D" parent="." unique_id=1089509129]
+[node name="WalkTheDog" type="Sprite2D" parent="." unique_id=1089509129 node_paths=PackedStringArray("dogSprite")]
 position = Vector2(-129, 441)
 texture = ExtResource("2_quk4b")
 script = ExtResource("3_7iwhi")
+dogSprite = NodePath(".")
+transitionScenes = "res://Scenes/Menu.tscn"
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=775125135]
 position = Vector2(-50000000000, 0)
