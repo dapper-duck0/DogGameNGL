@@ -19,13 +19,15 @@ var anchor_position: Vector2
 @export var transitionScenes: String
 @export var night: int
 
-var new_texture = load("res://Assets/DogImanges/StareOfDoom.png")
-
+var new_texture = load("res://Assets/DogImanges/TheLook.png")
+var firstSound = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	if night == 2:
 		SoundManager.play("res://Assets/SoundEffects/pantoman-demon-breathing-619441.mp3")
+	elif night == 3:
+		SoundManager.play("res://MusicFLD/soundreality-horror-mirror-room-249033.mp3")
 	else:
 		SoundManager.play("res://Assets/SoundEffects/freesound_community-dog_panting_20090425t1417-22476.mp3")
 	button_down.connect(_on_button_down)
@@ -43,13 +45,29 @@ func _process(delta: float) -> void:
 		wiggle()
 		if not SoundManager.is_sound_playing("res://Assets/SoundEffects/Petting Dog.wav"):
 			SoundManager.play("res://Assets/SoundEffects/Petting Dog.wav")
-		if night == 2 and petAmount > 90:
+		if night == 2 and petAmount > 80 and not firstSound:
+			firstSound = true
 			SoundManager.play("res://Assets/SoundEffects/LoudGrowl.wav")
 		
-		if petAmount >= 100:
+		if petAmount >= 100 and night != 3:
 			won = true
 			SoundManager.stop_all()
+			
 			get_tree().change_scene_to_file(transitionScenes)
+		elif petAmount >= 100 and night == 3:
+			progressBar.position = Vector2(-1000, -1000)
+			sprite.position = Vector2(-500,500)
+			won = true
+			SoundManager.stop_all()
+			await get_tree().create_timer(4.3).timeout
+			SoundManager.play("res://Assets/SoundEffects/Loud Scream.wav")
+			SoundManager.play("res://Assets/SoundEffects/freesound_community-monster-scream-death-101123.mp3")
+			sprite.scale *= 2
+			sprite.texture = new_texture
+			sprite.position = Vector2(600,400)
+			await get_tree().create_timer(.6).timeout
+			get_tree().change_scene_to_file(transitionScenes)
+			
 	
 
 func has_moved_enough() -> bool:
@@ -75,7 +93,8 @@ func _unhandled_input(event: InputEvent) -> void:
 
 func wiggle() -> void:
 	if not shake_tween or not shake_tween.is_running():
-		shake_tween = create_tween()
-		shake_tween.tween_property(sprite, "rotation_degrees", randf_range(-tilt, tilt), speed)
+		if night != 3:
+			shake_tween = create_tween()
+			shake_tween.tween_property(sprite, "rotation_degrees", randf_range(-tilt, tilt), speed)
 	
 	

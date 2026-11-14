@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://dwyc8r31byrkt" path="res://Background/Sunlit Retro Living Room.png" id="1_ue5mt"]
 [ext_resource type="Script" uid="uid://b70d4bs62w45a" path="res://Assets/Scripts/background.gd" id="2_5ljsd"]
 [ext_resource type="Script" uid="uid://cinto3f4xnj1d" path="res://Scenes/audio_stream_player.gd" id="3_yhuax"]
-[ext_resource type="AudioStream" uid="uid://bvhgp2qlobitb" path="res://MusicFLD/Dog_pettingNormal.wav" id="4_4yit7"]
+[ext_resource type="AudioStream" uid="uid://ciwpoiltv7nnx" path="res://Assets/SoundEffects/dogpetFastFast.wav" id="4_lijq4"]
 [ext_resource type="Texture2D" uid="uid://dkcvq11by6ubk" path="res://Assets/DogImanges/German Shepherd Sitting Cutout.png" id="5_5b752"]
 [ext_resource type="Script" uid="uid://bchxc6fdlr12x" path="res://Assets/Scripts/DogPet.gd" id="6_hjgsb"]
 [ext_resource type="PackedScene" uid="uid://du7hqt6skixor" path="res://Scenes/sound_manager.tscn" id="7_bahf6"]
@@ -32,7 +32,7 @@ roomNumber = 1
 stream = SubResource("AudioStreamWAV_ainff")
 autoplay = true
 script = ExtResource("3_yhuax")
-room_sounds = Array[AudioStream]([ExtResource("4_4yit7")])
+room_sounds = Array[AudioStream]([ExtResource("4_lijq4")])
 
 [node name="DogWaiting" type="Sprite2D" parent="." unique_id=1515243548]
 position = Vector2(506.00003, 508.99997)
@@ -50,7 +50,7 @@ sprite = NodePath("..")
 progressBar = NodePath("../../ProgressBar")
 tilt = 90.0
 speed = 0.1
-petSpeed = 20.0
+petSpeed = 50.0
 transitionScenes = "res://Scenes/Menu.tscn"
 night = 2
 
