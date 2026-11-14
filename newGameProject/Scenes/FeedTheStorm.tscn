@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c384wgp76nga4"]
 
 [ext_resource type="Texture2D" uid="uid://8h5cpy5kxdqw" path="res://Background/Ominous Magenta Kitchen at Night.png" id="1_1t455"]
+[ext_resource type="Script" uid="uid://b70d4bs62w45a" path="res://Assets/Scripts/background.gd" id="2_cpc1e"]
 [ext_resource type="Texture2D" uid="uid://c3feyf3kr3l6x" path="res://Assets/DogBowls/empty_dog_bowl_transparent.png" id="2_e88qu"]
 [ext_resource type="Script" uid="uid://b82osgvm0wedp" path="res://Assets/Scripts/FeedingScript.gd" id="3_juyli"]
 [ext_resource type="Script" uid="uid://d37rxkdaug1nf" path="res://Assets/Scripts/returnFood.gd" id="4_cpc1e"]
@@ -9,11 +10,14 @@
 [ext_resource type="Script" uid="uid://dhlrn3dnmniaj" path="res://Assets/Scripts/food.gd" id="6_a6qcy"]
 [ext_resource type="Script" uid="uid://0pyx3dgsep5g" path="res://Assets/Scripts/ClickMe.gd" id="7_a6qcy"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_a6qcy"]
-size = Vector2(140, 20)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gyvws"]
+size = Vector2(633.6288, 414.61322)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_gyvws"]
 radius = 11.045361
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_a6qcy"]
+load_path = "res://.godot/imported/Pixel-Art Brown Kibble Pellet.png-e3152841537382152707f50c5c0dc5b3.ctex"
 
 [node name="Node2D" type="Node2D" unique_id=1479693001]
 
@@ -27,17 +31,17 @@ position = Vector2(1039, 576)
 scale = Vector2(0.3503628, 0.29907408)
 texture = ExtResource("2_e88qu")
 script = ExtResource("3_juyli")
+roomNumber = 3
 
-[node name="RigidBody2D2" type="RigidBody2D" parent="EmptyDogBowlTransparent" unique_id=90897080 node_paths=PackedStringArray("food")]
-visible = false
-position = Vector2(-214.06372, -90.278564)
-scale = Vector2(2.8541842, 3.343653)
+[node name="Area2D" type="Area2D" parent="EmptyDogBowlTransparent" unique_id=316978217 node_paths=PackedStringArray("food", "bowl")]
 script = ExtResource("4_cpc1e")
 food = NodePath("../../RigidBody2D")
+bowl = NodePath("..")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EmptyDogBowlTransparent/RigidBody2D2" unique_id=1806162793]
-position = Vector2(62, 12)
-shape = SubResource("RectangleShape2D_a6qcy")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EmptyDogBowlTransparent/Area2D" unique_id=1507550343]
+position = Vector2(-28.541504, 13.374634)
+scale = Vector2(1, 0.99999976)
+shape = SubResource("RectangleShape2D_gyvws")
 
 [node name="PixelArtMaxDogFoodBag" type="Sprite2D" parent="." unique_id=484456259]
 position = Vector2(126, 509)
@@ -56,7 +60,7 @@ shape = SubResource("CircleShape2D_gyvws")
 
 [node name="PixelArtBrownKibblePellet" type="Sprite2D" parent="RigidBody2D/CollisionShape2D" unique_id=207897355]
 scale = Vector2(0.03462442, 0.033536553)
-texture = ExtResource("5_p4182")
+texture = SubResource("CompressedTexture2D_a6qcy")
 
 [node name="Button" type="Button" parent="." unique_id=1444551735]
 offset_left = 68.0
@@ -65,3 +69,10 @@ offset_right = 205.0
 offset_bottom = 617.0
 action_mode = 0
 script = ExtResource("7_a6qcy")
+metadata/_edit_use_anchors_ = true
+
+[node name="PixelArtBrownKibblePellet" type="Sprite2D" parent="." unique_id=1273865947]
+position = Vector2(-1398, 938)
+texture = ExtResource("5_p4182")
+script = ExtResource("2_cpc1e")
+roomNumber = 3
