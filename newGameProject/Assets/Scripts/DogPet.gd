@@ -8,6 +8,7 @@ var petAmount = 0
 var is_moving_enough: bool
 var work_timer: float = 3.0
 var anchor_position: Vector2
+var blood: Sprite2D
 
 @export var sprite: Sprite2D
 @export var progressBar: ProgressBar
@@ -60,12 +61,16 @@ func _process(delta: float) -> void:
 			won = true
 			SoundManager.stop_all()
 			await get_tree().create_timer(4.3).timeout
+			blood = $"../Sprite2D"
 			SoundManager.play("res://Assets/SoundEffects/Loud Scream.wav")
 			SoundManager.play("res://Assets/SoundEffects/freesound_community-monster-scream-death-101123.mp3")
+			
 			sprite.scale *= 2
 			sprite.texture = new_texture
 			sprite.position = Vector2(600,400)
-			await get_tree().create_timer(.6).timeout
+			await get_tree().create_timer(.1).timeout
+			blood.visible = true
+			await get_tree().create_timer(.5).timeout
 			get_tree().change_scene_to_file(transitionScenes)
 			
 	
