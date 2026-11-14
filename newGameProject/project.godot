@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="PuppyGame"
-run/main_scene="uid://bq3huk364skd3"
+run/main_scene="uid://f2liq4b57d00"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
