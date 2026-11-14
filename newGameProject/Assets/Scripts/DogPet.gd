@@ -17,14 +17,17 @@ var anchor_position: Vector2
 @export var petSpeed: float
 @export var required_distance: float = 10.0
 @export var transitionScenes: String
+@export var night: int
 
-
+var new_texture = load("res://Assets/DogImanges/StareOfDoom.png")
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	SoundManager.play("res://Assets/SoundEffects/freesound_community-dog_panting_20090425t1417-22476.mp3")
-	
+	if night == 2:
+		SoundManager.play("res://Assets/SoundEffects/pantoman-demon-breathing-619441.mp3")
+	else:
+		SoundManager.play("res://Assets/SoundEffects/freesound_community-dog_panting_20090425t1417-22476.mp3")
 	button_down.connect(_on_button_down)
 	button_up.connect(_on_button_up)
 	mouse_entered.connect(_on_enter)
@@ -40,7 +43,8 @@ func _process(delta: float) -> void:
 		wiggle()
 		if not SoundManager.is_sound_playing("res://Assets/SoundEffects/Petting Dog.wav"):
 			SoundManager.play("res://Assets/SoundEffects/Petting Dog.wav")
-		
+		if night == 2 and petAmount > 90:
+			SoundManager.play("res://Assets/SoundEffects/LoudGrowl.wav")
 		
 		if petAmount >= 100:
 			won = true
