@@ -6,6 +6,7 @@ var dayTwo = "res://Scenes/StageTwo/Menu2.tscn"
 var dayThree = "res://Scenes/StageThree/Menu3.tscn"
 
 func _ready() -> void:
+	SoundManager.play("res://MusicFLD/AdventureMusic.wav")
 	button_down.connect(_on_button_down)
 
 func _on_button_down() -> void:

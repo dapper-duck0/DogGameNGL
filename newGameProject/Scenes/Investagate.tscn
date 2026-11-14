@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://c1nmnlbjw4fyp" path="res://Background/Cozy Vintage Pixel House Plan.png" id="1_awi2l"]
 [ext_resource type="Texture2D" uid="uid://opnnrci3ujgx" path="res://Assets/Walking Sprites/Pixel-Art Character Sprite Sheet-4.png" id="2_xrrie"]
+[ext_resource type="Script" uid="uid://bd1my46txiuoo" path="res://Assets/Scripts/MovementScripts/playerSrite.gd" id="3_jmexa"]
 [ext_resource type="Script" uid="uid://bausm5cjjkfnf" path="res://Assets/Scripts/MovementScripts/MovementScipts.gd" id="3_uoeh0"]
 [ext_resource type="Texture2D" uid="uid://b7o66f6k6cf6i" path="res://Background/Solid_black.svg.webp" id="4_xrrie"]
 [ext_resource type="Script" uid="uid://c56o5dsy3deil" path="res://Assets/Scripts/MovementScripts/HideButtons.gd" id="5_4jdkd"]
@@ -63,6 +64,7 @@ script = ExtResource("3_uoeh0")
 position = Vector2(1, -2.999939)
 scale = Vector2(0.47996113, 0.5601474)
 texture = ExtResource("2_xrrie")
+script = ExtResource("3_jmexa")
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D/PixelArtCharacterSpriteSheet4" unique_id=586994291]
 position = Vector2(-2.0835018, 7.140851)
