@@ -26,13 +26,13 @@ position = Vector2(577, 319)
 scale = Vector2(0.6848086, 0.6908873)
 texture = ExtResource("1_ue5mt")
 script = ExtResource("2_5ljsd")
-roomNumber = 1
+roomNumber = 2
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="SunlitRetroLivingRoom" unique_id=875715305]
 stream = SubResource("AudioStreamWAV_ainff")
 autoplay = true
 script = ExtResource("3_yhuax")
-room_sounds = Array[AudioStream]([ExtResource("4_lijq4")])
+room_sounds = Array[AudioStream]([ExtResource("4_lijq4"), ExtResource("4_lijq4")])
 
 [node name="DogWaiting" type="Sprite2D" parent="." unique_id=1515243548]
 position = Vector2(506.00003, 508.99997)
@@ -51,7 +51,7 @@ progressBar = NodePath("../../ProgressBar")
 tilt = 90.0
 speed = 0.1
 petSpeed = 50.0
-transitionScenes = "res://Scenes/Menu.tscn"
+transitionScenes = "res://Scenes/StageTwo/Menu2.tscn"
 night = 2
 
 [node name="Node" type="Node" parent="DogWaiting" unique_id=730219107]
