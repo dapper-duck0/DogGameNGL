@@ -20,7 +20,7 @@ var blood: Sprite2D
 @export var transitionScenes: String
 @export var night: int
 
-var new_texture = load("res://Assets/DogImanges/TheLook.png")
+var new_texture = load("res://Assets/DogImanges/DohholdbackOpen (1).png")
 var firstSound = false
 
 # Called when the node enters the scene tree for the first time.

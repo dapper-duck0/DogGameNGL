@@ -11,7 +11,7 @@
 [node name="RicardoWalk" type="Node2D" unique_id=252372594]
 
 [node name="Background" type="Sprite2D" parent="." unique_id=2123227039]
-position = Vector2(724, 256)
+position = Vector2(766, 273)
 texture = ExtResource("1_mmns4")
 
 [node name="WalkTheDog" type="Sprite2D" parent="." unique_id=1089509129 node_paths=PackedStringArray("dogSprite")]
