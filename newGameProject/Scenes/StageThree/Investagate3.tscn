@@ -654,7 +654,7 @@ offset_bottom = 1213.0
 scale = Vector2(3.275, 3.275)
 text = "yes"
 script = ExtResource("6_2ddhh")
-currentDay = 1
+currentDay = 3
 
 [node name="Button3" type="Button" parent="." unique_id=924885921]
 offset_left = 153.0

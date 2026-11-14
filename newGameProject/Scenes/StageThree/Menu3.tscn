@@ -87,6 +87,7 @@ offset_bottom = 371.0
 text = "Explore"
 script = ExtResource("3_14an0")
 ButtonNum = 4
+room4 = "res://Scenes/StageThree/Investagate3.tscn"
 
 [node name="SunlitRetroLivingRoom" type="Sprite2D" parent="." unique_id=859833470]
 z_index = -2394
