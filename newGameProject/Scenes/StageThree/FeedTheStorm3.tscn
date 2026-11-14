@@ -11,6 +11,7 @@
 [ext_resource type="Script" uid="uid://b70d4bs62w45a" path="res://Assets/Scripts/background.gd" id="9_yjc2s"]
 [ext_resource type="Texture2D" uid="uid://4v24mhyw3gp6" path="res://Assets/DogImanges/DownBoy.png" id="10_tdn70"]
 [ext_resource type="Script" uid="uid://cni6gajiwuayb" path="res://Assets/Scripts/Shaking.gd" id="11_ehhjt"]
+[ext_resource type="AudioStream" uid="uid://b2pha40c55gas" path="res://MusicFLD/FeedSongCutted.wav" id="12_xgesj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gyvws"]
 size = Vector2(633.6288, 414.61322)
@@ -88,3 +89,7 @@ z_index = -3
 position = Vector2(-363, 317)
 texture = ExtResource("10_tdn70")
 script = ExtResource("11_ehhjt")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1266501792]
+stream = ExtResource("12_xgesj")
+autoplay = true

@@ -9,6 +9,7 @@
 [ext_resource type="Script" uid="uid://0pyx3dgsep5g" path="res://Assets/Scripts/ClickMe.gd" id="7_tmopt"]
 [ext_resource type="Texture2D" uid="uid://dlwpb3ix4ls4e" path="res://Assets/DogBowls/Pixel-Art Brown Kibble Pellet.png" id="8_idk6s"]
 [ext_resource type="Script" uid="uid://b70d4bs62w45a" path="res://Assets/Scripts/background.gd" id="9_s1aft"]
+[ext_resource type="AudioStream" uid="uid://deetx20dg65vs" path="res://MusicFLD/feeding.wav" id="10_4e3e5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gyvws"]
 size = Vector2(633.6288, 414.61322)
@@ -84,3 +85,7 @@ position = Vector2(-1398, 938)
 texture = ExtResource("8_idk6s")
 script = ExtResource("9_s1aft")
 roomNumber = 3
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1543574731]
+stream = ExtResource("10_4e3e5")
+autoplay = true

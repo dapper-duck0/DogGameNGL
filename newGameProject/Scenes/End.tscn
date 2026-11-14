@@ -22,10 +22,10 @@ text = "There never was a happy little dog"
 flat = true
 
 [node name="Button2" type="Button" parent="." unique_id=735868528]
-offset_left = 362.0
-offset_top = 698.0
-offset_right = 783.0
-offset_bottom = 1521.0
+offset_left = 369.0
+offset_top = 920.0
+offset_right = 790.0
+offset_bottom = 2062.0
 theme_override_font_sizes/font_size = 30
 text = "Credits:
 
