@@ -33,10 +33,11 @@ texture = ExtResource("2_e88qu")
 script = ExtResource("3_juyli")
 roomNumber = 3
 
-[node name="Area2D" type="Area2D" parent="EmptyDogBowlTransparent" unique_id=316978217 node_paths=PackedStringArray("food", "bowl")]
+[node name="Area2D" type="Area2D" parent="EmptyDogBowlTransparent" unique_id=316978217 node_paths=PackedStringArray("food", "bowl", "buttons")]
 script = ExtResource("4_cpc1e")
 food = NodePath("../../RigidBody2D")
 bowl = NodePath("..")
+buttons = NodePath("../../Button")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EmptyDogBowlTransparent/Area2D" unique_id=1507550343]
 position = Vector2(-28.541504, 13.374634)
