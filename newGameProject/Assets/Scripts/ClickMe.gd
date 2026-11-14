@@ -7,6 +7,7 @@ func _ready() -> void:
 	button_up.connect(_heldChangeFalse)
 
 func _heldChangeTrue() -> void:
+	SoundManager.play("res://Assets/SoundEffects/litupsubway-paper-grab-2-616937.mp3")
 	isHeld = true
 func _heldChangeFalse() -> void:
 	isHeld = false

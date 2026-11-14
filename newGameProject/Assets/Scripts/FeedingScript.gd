@@ -31,8 +31,11 @@ func _process(delta: float) -> void:
 			texture = room2
 		win = true
 		await get_tree().create_timer(1.4).timeout
+		if roomNumber == 3:
+			SoundManager.play("res://Assets/SoundEffects/freesound_community-screech-103213.mp3")
 		goodBoy.global_position = Vector2(915.0, 420.0)
 		await get_tree().create_timer(.4).timeout
+		SoundManager.stop_all()
 		get_tree().change_scene_to_file(transitionScenes)
 		
 		

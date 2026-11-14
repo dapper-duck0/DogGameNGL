@@ -13,4 +13,5 @@ func _on_body_entered(body) -> void:
 	PhysicsServer2D.body_set_state(rid, PhysicsServer2D.BODY_STATE_LINEAR_VELOCITY, Vector2.ZERO)
 func _on_body_exited(body) -> void:
 	if not buttons.isHeld:
+		SoundManager.play("res://Assets/SoundEffects/universfield-game-bonus-144751.mp3")
 		bowl.fullAmount += bowl.fillingAmount
