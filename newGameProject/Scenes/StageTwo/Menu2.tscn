@@ -44,6 +44,7 @@ offset_bottom = 243.0
 text = "Pet the doggo"
 script = ExtResource("3_syfuq")
 ButtonNum = 1
+room1 = "res://Scenes/StageTwo/Ricardotest2.tscn"
 
 [node name="Button3" type="Button" parent="." unique_id=312749151]
 layout_mode = 0
@@ -54,6 +55,7 @@ offset_bottom = 372.0
 text = "Walk the Doggo"
 script = ExtResource("3_syfuq")
 ButtonNum = 3
+room3 = "res://Scenes/StageTwo/RicardoWalk2.tscn"
 
 [node name="Button2" type="Button" parent="." unique_id=1299896259]
 layout_mode = 0
@@ -64,6 +66,7 @@ offset_bottom = 243.0
 text = "Feed the doggo"
 script = ExtResource("3_syfuq")
 ButtonNum = 2
+room2 = "res://Scenes/StageTwo/FeedTheStorm2.tscn"
 
 [node name="Button5" type="Button" parent="." unique_id=989852558]
 layout_mode = 0
@@ -74,6 +77,7 @@ offset_bottom = 474.0
 text = "End Day"
 script = ExtResource("3_syfuq")
 ButtonNum = 5
+room5 = "res://Scenes/StageThree/Menu3.tscn"
 
 [node name="Button4" type="Button" parent="." unique_id=2092027147]
 layout_mode = 0

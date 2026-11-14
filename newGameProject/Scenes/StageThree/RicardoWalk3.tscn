@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://bjkeuud8dtpk0"]
+
+[ext_resource type="Texture2D" uid="uid://c7f3x0qytr234" path="res://Background/Golden Hour Suburban Park Bench.png" id="1_6djcg"]
+[ext_resource type="Texture2D" uid="uid://b73dso0jvp84a" path="res://Assets/DogImanges/dogsideviewnotpng.webp" id="2_tlnvn"]
+[ext_resource type="Script" uid="uid://daqdsiiifbcvf" path="res://Assets/Scripts/Walkcounter.gd" id="3_t0emx"]
+[ext_resource type="Script" uid="uid://b70d4bs62w45a" path="res://Assets/Scripts/background.gd" id="4_f5u3o"]
+[ext_resource type="AudioStream" uid="uid://ckmc24ll8apmq" path="res://MusicFLD/WalkingDog.wav" id="5_mrf0y"]
+[ext_resource type="Script" uid="uid://cinto3f4xnj1d" path="res://Scenes/audio_stream_player.gd" id="6_d0d2d"]
+[ext_resource type="PackedScene" uid="uid://du7hqt6skixor" path="res://Scenes/sound_manager.tscn" id="7_ajqde"]
+
+[node name="RicardoWalk" type="Node2D" unique_id=252372594]
+
+[node name="Background" type="Sprite2D" parent="." unique_id=2123227039]
+position = Vector2(724, 256)
+texture = ExtResource("1_6djcg")
+
+[node name="WalkTheDog" type="Sprite2D" parent="." unique_id=1089509129 node_paths=PackedStringArray("dogSprite")]
+position = Vector2(-129, 441)
+texture = ExtResource("2_tlnvn")
+script = ExtResource("3_t0emx")
+dogSprite = NodePath(".")
+transitionScenes = "res://Scenes/Menu.tscn"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=775125135]
+position = Vector2(-50000000000, 0)
+script = ExtResource("4_f5u3o")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Sprite2D" unique_id=794093649]
+stream = ExtResource("5_mrf0y")
+autoplay = true
+script = ExtResource("6_d0d2d")
+room_sounds = Array[AudioStream]([ExtResource("5_mrf0y")])
+
+[node name="sound_manager" parent="Sprite2D/AudioStreamPlayer" unique_id=1549722425 instance=ExtResource("7_ajqde")]
