@@ -14,12 +14,13 @@
 position = Vector2(722, 269)
 texture = ExtResource("1_6djcg")
 
-[node name="WalkTheDog" type="Sprite2D" parent="." unique_id=1089509129 node_paths=PackedStringArray("dogSprite")]
+[node name="WalkTheDog" type="Sprite2D" parent="." unique_id=1089509129 node_paths=PackedStringArray("dogSprite", "progressBar")]
 position = Vector2(651, 372)
 scale = Vector2(0.5942029, 0.5942029)
 texture = ExtResource("2_fb1h2")
 script = ExtResource("3_fb1h2")
 dogSprite = NodePath(".")
+progressBar = NodePath("../ProgressBar")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=775125135]
 position = Vector2(-50000000000, 0)
@@ -32,3 +33,13 @@ script = ExtResource("6_d0d2d")
 room_sounds = Array[AudioStream]([ExtResource("5_mrf0y")])
 
 [node name="sound_manager" parent="Sprite2D/AudioStreamPlayer" unique_id=1549722425 instance=ExtResource("7_ajqde")]
+
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=1902614242]
+visible = false
+offset_left = 100.0
+offset_top = 650.0
+offset_right = 758.55396
+offset_bottom = 677.0
+rotation = -1.5707964
+
+[node name="soundManager" parent="ProgressBar" unique_id=221597208 instance=ExtResource("7_ajqde")]
