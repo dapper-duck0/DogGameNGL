@@ -32,6 +32,7 @@ scale = Vector2(0.3503628, 0.29907408)
 texture = ExtResource("2_276rp")
 script = ExtResource("3_n7w03")
 roomNumber = 2
+transitionScenes = "res://Scenes/StageTwo/Menu2.tscn"
 
 [node name="Area2D" type="Area2D" parent="EmptyDogBowlTransparent" unique_id=316978217 node_paths=PackedStringArray("food", "bowl", "buttons")]
 script = ExtResource("4_12svh")
