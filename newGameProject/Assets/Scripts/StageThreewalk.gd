@@ -11,8 +11,12 @@ var moveDistance = 0
 var stage = 1
 var win = false
 var new_texture = load("res://Assets/DogImanges/DohholdbackOpen (1).png")
-var ending_texture = load("res://Assets/DogImanges/DogholdbackClose (1).png")
+var ending_texture = load("res://Assets/DogImanges/TheLook.png")
+var the_look = load("res://Assets/DogImanges/DogholdbackClose (1).png")
 var blood: Sprite2D
+
+func _ready() -> void:
+	SoundManager.play("res://Assets/SoundEffects/alex_jauk-creepy-ghost-man-ambient-theme-435682.mp3")
 
 func _process(delta: float) -> void:
 	if stage == 2 and not win:
@@ -31,17 +35,21 @@ func _process(delta: float) -> void:
 			await get_tree().create_timer(.1).timeout
 			blood.visible = true
 			await get_tree().create_timer(.6).timeout
+			SoundManager.stop_all()
 			get_tree().change_scene_to_file("res://Scenes/StageThree/Menu3.tscn")
 		wiggle()
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and event.pressed and stage == 1:
 		if event.button_index == MOUSE_BUTTON_LEFT:
-			SoundManager.play("res://Assets/SoundEffects/BarkWalkMain.wav")
+			SoundManager.play("res://Assets/SoundEffects/SingleStep.wav")
 			moveDistance += speed
 			dogSprite.position += Vector2(0, speed)
 			dogSprite.scale *= 1.1
+			
 			if moveDistance > 240:
+				SoundManager.stop_all()
+				SoundManager.play("res://Assets/SoundEffects/TwoDogs.wav")
 				stage = 2
 				moveDistance = 0
 				speed = 3
@@ -56,8 +64,8 @@ func _input(event: InputEvent) -> void:
 			if moveDistance > 100:
 				stage = 3
 				win = true
-				dogSprite.texture = ending_texture
-				
+				dogSprite.texture = the_look
+				SoundManager.stop_all()
 				await get_tree().create_timer(1.5).timeout
 				
 				get_tree().change_scene_to_file("res://Scenes/StageThree/Menu3.tscn")

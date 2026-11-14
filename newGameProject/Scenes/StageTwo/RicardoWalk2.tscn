@@ -20,9 +20,11 @@ position = Vector2(-129, 441)
 texture = ExtResource("2_e1ita")
 script = ExtResource("3_700gs")
 dogSprite = NodePath(".")
-transitionScenes = "res://Scenes/Menu.tscn"
+transitionScenes = "res://Scenes/StageTwo/Menu2.tscn"
+will_whimper = true
 
 [node name="Sprite2D" type="Sprite2D" parent="WalkTheDog" unique_id=2022284874]
+position = Vector2(-6464, -202)
 texture = ExtResource("4_4q65r")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=775125135]
