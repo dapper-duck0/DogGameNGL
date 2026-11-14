@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://cn5nar2vhb1bs"]
+
+[ext_resource type="Texture2D" uid="uid://ba8x5sop0gaoi" path="res://Background/END.png" id="1_pw64i"]
+[ext_resource type="Script" uid="uid://clmn03mj4tbg" path="res://Assets/Scripts/creditsRoll.gd" id="2_67ibq"]
+
+[node name="Node" type="Node" unique_id=1146980789]
+
+[node name="End" type="Sprite2D" parent="." unique_id=883448879]
+position = Vector2(598, 352.00003)
+scale = Vector2(0.70696163, 0.8119509)
+texture = ExtResource("1_pw64i")
+
+[node name="Button" type="Button" parent="." unique_id=685937181]
+offset_left = 140.0
+offset_top = 578.00006
+offset_right = 618.0
+offset_bottom = 627.0136
+scale = Vector2(1.845, 1.845)
+text = "There never was a happy little dog"
+flat = true
+
+[node name="Button2" type="Button" parent="." unique_id=735868528]
+offset_left = 362.0
+offset_top = 698.0
+offset_right = 783.0
+offset_bottom = 1521.0
+theme_override_font_sizes/font_size = 30
+text = "Credits:
+
+Devolopers:
+Colten Leany
+Ricardo Morales
+
+Grammer:
+ChatGPT
+
+Lore:
+Colten Leany
+
+Sound Effects:
+Ricardo Morales
+
+Map Disigners:
+Colten Leany
+
+Lead of Combat Machanics:
+Ricardo Morales
+
+Animaters:
+Ricardo Morales
+Colten Leany
+
+Helpful Distractions:
+Jarred
+"
+flat = true
+autowrap_trim_flags = 0
+script = ExtResource("2_67ibq")
